@@ -19,6 +19,9 @@ CHECK_FUNCTION_EXISTS("strcasecmp" HAVE_STRCASECMP)
 CHECK_FUNCTION_EXISTS("strchr" HAVE_STRCHR)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/mbfl)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/nls)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/filters)
 
 add_subdirectory(nls)
 add_subdirectory(filters)

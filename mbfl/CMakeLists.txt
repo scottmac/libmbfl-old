@@ -16,8 +16,4 @@ SET(mbfl_files mbfilter.c mbfl_string.c mbfl_language.c mbfl_encoding.c mbfl_con
 mbfl_ident.c mbfl_memory_device.c mbfl_allocators.c mbfl_filter_output.c
 mbfilter_pass.c mbfilter_wchar.c mbfilter_8bit.c)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-
-add_library(mbfl STATIC ${mbfl_files})
-target_link_libraries(mbfl mbfl_nls)
-target_link_libraries(mbfl mbfl_filters)
+add_library(mbfl STATIC ${mbfl_files} ${mbfl_filters_files} ${mbfl_nls_files})
